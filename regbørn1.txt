@@ -1,0 +1,5 @@
+Barnets Navn
+Barnets Fødselsdag
+Forældres Navn
+Forældres Telefonnummer
+Barnets Alergier/Sygdomme

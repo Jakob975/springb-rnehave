@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Homea</title>
+    <style>
+        /*body {background-color: aqua;} */
+        body {background-color : lightblue;}
+        h1 {text-align: center;}
+        form {text-align: center;}
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+
+        .venteliste {
+            background-color: yellow;
+        }
+        .opretbarn {
+            background-color: lawngreen;
+        }
+        .medarb {
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+  <h1> Velkommen til Roskilde frie børnehave</h1>
+
+
+
+  <p th:text="${navn}"></p>
+
+  <!--//String navnet = request.getParameter("navn");   31766702-->
+
+  <script>
+      function myFunction() {
+  //        document.getElementById("demo").innerHTML = "Vi kan kontaktes på nedenstående telefonnummer: "
+  //             + "<br>" + "tlf 36 46 44 44";
+          //String nyverdi  = request.getParameter("navn");
+          document.getElementById("demo").innerHTML = "Vi kan kontaktes på nedenstående telefonnummer: "
+                       + "<br>" + "tlf 36 46 44 44";
+      }
+  </script>
+
+    <br>
+  <form   method="post" action="/aBørn">
+      <p>Tilføj Barn:</p>
+
+      <input type="text" name="barnNavn" value="Barnets Navn">
+      <br>
+      <br>
+      <input type="text" name="fødselsdag" value="Barnets Fødselsdag">
+      <br>
+      <br>
+      <input type="text" name="forældresNavn" value="Forældres Navn">
+      <br>
+      <br>
+      <input type="text" name="forældresTlf" value="Forældres Telefonnummer">
+      <br>
+      <br>
+      <input type="text" name="barnetsAlergiSyg" value="Barnets Alergier/Sygdomme">
+      <br>
+      <br>
+      <input class="venteliste" type="submit" value="Tilføj til Venteliste">
+      <input class="opretbarn" type="submit" value="Tilføj til Børnehave">
+  </form>
+      <br>
+      <br>
+
+
+      <button type="button" onclick="myFunction()">Har du brug for hjælp så tryk her</button>
+      <br>
+
+      <p id="demo"></p>
+
+
+
+
+</body>
+</html>

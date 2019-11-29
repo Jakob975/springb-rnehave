@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>TomKasse</title>
+    <style>
+
+        /*body {background-color: aqua;} */
+        body {background-color : lightblue;}
+        h1, h2 {text-align: center;}
+        form {text-align: center;}
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+
+        .ingen_medarb {
+            background-color: red;
+        }
+        .medarb {
+            background-color: lawngreen;
+        }
+        h2 {color: green;}
+    </style>
+</head>
+<body>
+<h1> Velkommen til Roskilde frie børnehave  </h1>
+
+
+<!-- Jeg prøver at putte jakob i feltet navn-->
+<p th:text="${navn}"></p>
+
+
+
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Vi kan kontaktes på nedenstående telefonnummer: "
+            + "<br>" + "tlf 36 46 44 44";
+
+    }
+</script>
+
+<br>
+<form   method="post" action="/aBørn">
+    <p>Tilføj Barn:</p>
+    <!--<p>Barnets Navn </p>
+    <p>"Barnets Fødselsdag"</p>
+    <p>"Forældres Navn"</p>
+    "Forældres Telefonnummer"
+    Barnets Alergier/Sygdomm
+                         -->
+    <input type="text" name="barnNavn" value=" ">
+    <br>
+    <br>
+    <input type="text" name="fødselsdag" value=" ">
+    <br>
+    <br>
+    <input type="text" name="forældresNavn" value=" ">
+    <br>
+    <br>
+    <input type="text" name="forældresTlf" value=" ">
+    <br>
+    <br>
+    <input type="text" name="barnetsAlergiSyg" value=" ">
+    <br>
+    <br>
+    <input type="submit" value="Tilføj til Venteliste"> <input type="submit" value="Tilføj til Børnehave">
+</form>
+<br>
+<h2>Oprettlesen gik godt og barnet er oprettet og indmeldt i børnehaven</h2>
+<br>
+
+
+<button type="button" onclick="myFunction()">Har du brug for hjælp så tryk her</button>
+<br>
+
+<p id="demo"></p>
+
+</body>
+</html>
